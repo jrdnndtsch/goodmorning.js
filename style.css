@@ -19,7 +19,15 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 .sun {
 	position: absolute;
-	/*top:50%;*/
+	top:50%;
+	left:100%;
+	transform: translateY(-50%);
 
+}
+.moon{
+	position: absolute;
+	top:50%;
+	right: 100%;
+	transform: translateY(-50%);
 }
 

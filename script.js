@@ -34,7 +34,7 @@ setInterval(sun.time
 setInterval(
 	function(){
 		sun.circle = function(icon, degree){
-				icon.css({WebkitTransform: 'rotate('+ (degree + 90) +'deg)'});
+				icon.css({WebkitTransform: 'rotate('+ (degree) +'deg)'});
 				 console.log(icon)
 			}
 		sun.circle($('.sunrise'), 30*(sun.h%12) + sun.min/2);	
