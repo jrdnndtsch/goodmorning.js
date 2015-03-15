@@ -36,19 +36,19 @@ $.fn.goodMorning = function(input){
 			if(settings.monday == true && sun.day == 'Monday' && settings.icon == true){
 				var goodMonday = $('<p>').text('Happy Monday');
 				$('.timeDisplay').html(goodMonday);
-				var iconMonday = $('<img src="monday.svg" alt="steaming coffee mug">');
+				var iconMonday = $('<img src="assets/monday.svg" alt="steaming coffee mug">');
 				$('.sunriseIcon').html(iconMonday);
 				}
 				
 			else if(settings.icon == true){
-				var iconMorning = $('<img src="sun.svg" alt="sun">');
+				var iconMorning = $('<img src="assets/sun.svg" alt="sun">');
 				$('.sunriseIcon').html(iconMorning);
 			}
 		} else if(sun.hh >= settings.noon && sun.hh < settings.evening){
 			var goodAfternoon = $('<p>').text('Good Afternoon');
 			$('.timeDisplay').html(goodAfternoon);
 			if(settings.icon == true){
-				var iconAfternoon = $('<img src="sun.svg" alt="sun">');
+				var iconAfternoon = $('<img src="assets/sun.svg" alt="sun">');
 				$('.sunriseIcon').html(iconAfternoon);
 			}
 		} else if(sun.hh >= settings.evening && sun.hh < settings.night){
@@ -57,12 +57,12 @@ $.fn.goodMorning = function(input){
 			if(settings.tgif == true && sun.day == 'Friday' && settings.icon == true){
 				var goodTGIF = $('<p>').text('Happy Friday!');
 				$('.timeDisplay').html(goodTGIF);
-				var iconTGIF = $('<img src="tgif.svg" alt= "a martini">');
+				var iconTGIF = $('<img src="assets/tgif.svg" alt= "a martini">');
 				$('.sunriseIcon').html(iconTGIF);
 				
 			}
 			else if(settings.icon == true){
-				var iconEvening = $('<img src="evening.svg" alt= "sun setting">');
+				var iconEvening = $('<img src="assets/evening.svg" alt= "sun setting">');
 				$('.sunriseIcon').html(iconEvening);
 			}
 			
@@ -70,7 +70,7 @@ $.fn.goodMorning = function(input){
 			var goodNight = $('<p>').text('Good Night');
 			$('.timeDisplay').html(goodNight);
 			if(settings.icon == true){
-				var iconNight = $('<img src="moon.svg" alt= "moon and stars">');
+				var iconNight = $('<img src="assets/moon.svg" alt= "moon and stars">');
 				$('.sunriseIcon').html(iconNight);
 			}
 		} 
