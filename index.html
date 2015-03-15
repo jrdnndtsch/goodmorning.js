@@ -3,21 +3,143 @@
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200' rel='stylesheet' type='text/css'>
 	<title>sunrise</title>
 </head>
 <body>
 <div class="wrapper">
-	<div class="sunrise">
-		<img src="sun.svg" alt="sun" class="sun">
-		<!-- <div class="sun">
+	
+		<div class="sunrise">	
+			<div class="sunriseIcon"></div>
+			<div class="timeDisplay"></div> <!-- end .timeDisplay -->
+		</div> <!-- end .sunrise -->
+
+		<div class="instructions instAbout">
+			<h2>Good Morning!</h2>
+			<p>goodmorning.js is a jQuery plugin that makes use of the user's server location to retrieve the time and date and display messages accordingly.</p>
 		</div>
-		<div class="moon"> -->
-			<img src="moon.svg" alt="moon and stars" class="moon">
-		<!-- </div> -->
-	</div> <!-- end .sunrise -->
-	<div class="timeDisplay"></div> <!-- end .timeDisplay -->
+
+		<div class="instructions instHow">
+			<h2>The Setup</h2>
+			<p>Implementing goodmorning.js is simple. Include the goodmorning.js plugin script before the closing body tag of your HTML document, as displayed below. Make sure the script is included after the jQuery script and you have called the correct file path.</p>
+			<div class="code">
+			
+				<code>
+					&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&quot;&gt;&lt;/script&gt; 
+					<br>
+					&lt;script src=&quot;goodMorning.js&quot;&gt;&lt;/script&gt;
+					<br>
+					&lt;/body&gt;	
+				</code>
+			
+			</div> <!-- end .code -->
+		</div> <!-- end .instHow -->
+		<div class="instructions init">
+			<h2>The Initialization</h2>
+			<p>To run goodmorning.js call the function in your main scripts file as outlined below. Note that .wrapper is referring to a div in the HTML markup. You can replace this with the name of the div where you would like to display your goodmorning.js messsage.</p>
+			<div class="code">
+				<pre>
+$(function(){
+	$('.wrapper').goodMorning({
+
+	});
+});
+				</pre>
+			</div> <!-- end .code -->
+		</div> <!-- end .init -->
+		<div class="instructions custom">
+			<h2>The Customization</h2>
+			<p>Goodmorning.js can be styled in your css files targeting the time with a class of timeDisplay and the icon with a class of sunriseIcon. I have included a .css file with some default styling as well if you like. You can also customize your goodmorning.js plugin by choosing the time of day at which you would like to display each message. You can also choose to turn icons on or off and implement Friday or Monday modes. The following chart outlines the different options to personalize your goodmorning.js.</p>
+			<div class="settingsTable clearfix">
+				<ul class= "titles">
+					<li>Setting</li>
+					<li>Input Value</li>
+					<li>Display</li>
+					<li>Icon</li>
+					<li>Default</li>
+				</ul>
+				<ul class="morning setting">
+					<li>settings.morning</li>
+					<li>time (24h clock)</li>
+					<li>Good Morning</li>
+					<li><img src="sun.svg" alt="sun"></li>
+					<li>7h</li>
+				</ul>
+				<ul class="noon setting">
+					<li>settings.noon</li>
+					<li>time (24h clock)</li>
+					<li>Good Afternoon</li>
+					<li><img src="sun.svg" alt="sun"></li>
+					<li>12h</li>
+				</ul>
+				<ul class="evening setting">
+					<li>settings.evening</li>
+					<li>time (24h clock)</li>
+					<li>Good Evening</li>
+					<li><img src="evening.svg" alt="sun setting"></li>
+					<li>18h</li>
+				</ul>
+				<ul class="night settings">
+					<li>settings.night</li>
+					<li>time (24h clock)</li>
+					<li>Good Night</li>
+					<li><img src="moon.svg" alt="moon with stars"></li>
+					<li>22h</li>
+				</ul>
+				<ul class="monday settings">
+					<li>settings.monday</li>
+					<li>true/false</li>
+					<li>Happy Monday</li>
+					<li><img src="monday.svg" alt="coffee"></li>
+					<li>true</li>
+				</ul>
+				<ul class="tgif settings">
+					<li>settings.tgif</li>
+					<li>true/false</li>
+					<li>Happy Friday</li>
+					<li><img src="tgif.svg" alt="cocktail"></li>
+					<li>true</li>
+				</ul>
+				<ul class="icon settings">
+					<li>settings.icon</li>
+					<li>true/false</li>
+					<li>icon displayed</li>
+					<li>as indicated</li>
+					<li>true</li>
+				</ul>
+			</div>	<!-- end .settingsTable -->
+			<p>Here is an example of the code with custom settings employed</p>
+			<div class="code">
+				<pre>
+$(function(){
+	$('.wrapper').goodMorning({
+		morning: 8,
+		noon: 13,
+		evening:17,
+		night:20,
+		icon: true,
+		monday: true,
+		tgif: true
+	});
+});
+				</pre>
+			</div> <!-- end .code -->
+
+		</div> <!-- end .custom -->
+
+		<div class="theEnd">
+			<h2>And Good Night</h2>
+			<p>Goodmorning.js was made possible thanks to the glorious SVG images of <a href="http://thenounproject.com/Lubo%C5%A1%20Volkov/">Luboš Volkov</a>, <a href="http://thenounproject.com/hunotika/">hunotika</a>, <a href="http://thenounproject.com/imicons/">icons mind</a>, and <a href="http://thenounproject.com/yejinland/">YEJIN</a>!</p>
+			<p>Thank you for checking out goodmorning.js.</p>
+			<p>Happy coding!</p>
+			<p>- J</p>
+			<a href="http://jordandeutsch.com/" target="_">jordandeutsch.com</a>
+		</div>
+
+	
 </div> <!-- end .wrapper -->	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src= "script.js"></script>	
+<script src= "main.js"></script>
+<script src= "goodMorning.js"></script>	
 </body>
 </html>

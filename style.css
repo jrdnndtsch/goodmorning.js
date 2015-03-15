@@ -5,29 +5,108 @@ input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}b
 
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+body{
+	background: #FAFAD2;
+
+}
+.wrapper{
+	max-width: 875px;
+	border: 10px double #333;
+	margin: 150px auto;
+	background-color:white;
+	padding: 35px;
+	font-family: 'Avenir', 'Helvetica', sans-serif;
+	color: #333;
+	line-height: 1.5;
+	font-size: 18px;
+}
+.wrapper h2{
+	font-family: 'Andale Mono', monospace;
+	font-size: 22px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+	margin:0;
+	margin-top: 50px;
+}
+
+.code{
+	background:lightgrey;
+	padding: 15px 35px;
+}
+
+
+
+
 
 
 .sunrise {
-	width: 500px;
-	height:500px;
-	background:gold;
-	border-radius: 50%;
+	width: 100%;
+	padding:50px;
+	height: 150px;
 	position: relative;
-	margin:100px;
-
 }
 
-.sun {
+
+
+
+.timeDisplay{
+	font-family: 'Andale Mono', monospaced;
+	color: #333;
+	font-size: 35px;
 	position: absolute;
-	top:50%;
-	left:100%;
-	transform: translateY(-50%);
-
+	text-align: center;
+	top: 70%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
-.moon{
+
+.sunriseIcon{
 	position: absolute;
-	top:50%;
-	right: 100%;
-	transform: translateY(-50%);
+	text-align: center;
+	top: 15%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
 
+.settingsTable{
+	width: 100%;
+}
+.settingsTable ul{
+	padding:0;
+}
+
+.settingsTable ul li{
+	list-style:none;
+	display: inline-block;
+	float: left;
+	width: 17%;
+	height: 100px;
+	padding:2px;
+	border: 1px solid #333;
+	font-size: 15px;
+}
+
+.settingsTable ul li:first-child{
+	width: 23%;
+}
+
+.settingsTable ul li:last-child{
+	width: 14%;
+}
+
+.settingsTable .titles{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.theEnd a{
+	color: #444;
+}
+
+.theEnd a:hover{
+	color: lime;
+}
+
+ code{
+ word-wrap: break-word;
+}

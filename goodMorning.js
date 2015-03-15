@@ -1,4 +1,3 @@
-
 $.fn.goodMorning = function(input){
 	var settings = $.extend({
 		morning: 7,
@@ -29,13 +28,12 @@ $.fn.goodMorning = function(input){
 	setInterval(sun.time
 		, 1000);
 
-
+	//use day and time info to display messages and icons.
 	sun.good = function(input){
 		if (sun.hh >= settings.morning && sun.hh < settings.noon) {
 			var goodMorning = $('<p>').text('Good Morning');	
 			$('.timeDisplay').html(goodMorning)
 			if(settings.monday == true && sun.day == 'Monday' && settings.icon == true){
-				console.log('do we even go here?');
 				var goodMonday = $('<p>').text('Happy Monday');
 				$('.timeDisplay').html(goodMonday);
 				var iconMonday = $('<img src="monday.svg" alt="steaming coffee mug">');
@@ -81,10 +79,3 @@ $.fn.goodMorning = function(input){
 	}
 
 }
-		
-	
-
-
-
-
-
