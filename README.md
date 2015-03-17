@@ -4,11 +4,11 @@ goodmorning.js is a jQuery plugin that makes use of the user's server location t
 
 ##THE SETUP
 Implementing goodmorning.js is simple. Include the goodmorning.js plugin script before the closing body tag of your HTML document, as displayed below. Make sure the script is included after the jQuery script and you have called the correct file path. If you plan on including icons with your message make sure the assets folder is included and located in the same file as the goodmorning.js script.
-
+```
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
 <script src="goodMorning.js"></script> 
 </body>
-
+```
 ##THE INITIALIZATION
 To run goodmorning.js call the function in your main scripts file as outlined below. Note that .wrapper is referring to a div in the HTML markup. You can replace this with the name of the div where you would like to display your goodmorning.js messsage.
 
